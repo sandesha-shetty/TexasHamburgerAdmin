@@ -10,8 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.Data;
 
 /**
- * @author sande
- *
+ * @author Sandesha Shetty
+ * This is the Model for the Location Object 
  */
 @Document(collection = "locations")
 @Data

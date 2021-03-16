@@ -45,13 +45,6 @@ public class ReservationService implements IReservationService {
 	public Reservation findById(String id) {
 		return reservationRepository.findById(id)
                 .orElseThrow(() -> new ReservationNotFoundException(id));
-//		Optional<Reservation> reservation = reservationRepository.findById(id);
-//        if (reservation.isPresent()) {
-//            return reservation.get();
-//        } else {
-//            //throw new Exception("Reservation not found");
-//        }
-//		return null;
 	}
 
 	@Override

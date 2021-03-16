@@ -23,6 +23,16 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 	        body.put("message", "Reservation not found");
 	        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
 	    }
+	
+	@ExceptionHandler(LocationNotFoundException.class)
+    public ResponseEntity<Object> handleLocationNotFoundException(
+    		LocationNotFoundException ex, WebRequest request) {
+
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
+        body.put("message", "Location not found");
+        return new ResponseEntity<>(body, HttpStatus.NOT_FOUND);
+    }
 
 	    @ExceptionHandler(NoDataFoundException.class)
 	    public ResponseEntity<Object> handleNodataFoundException(

@@ -16,7 +16,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author sande
+ * @author sandesha Shetty
  *
  */
 @Configuration
@@ -34,9 +34,9 @@ public class SwaggerConfiguration {
 	
 	private ApiInfo apiDetails() {
 		return new ApiInfo(
-				"Hamburger restaurant admin API",
-				"Represents CRUD operations",
-				"1.0",
+				" Texas Hamburger restaurant admin API",
+				"With CRUD  API ",
+				"Version 1.0",
 				"Free to use",
 				new springfox.documentation.service.Contact("Sandesha Shetty", "", "sandesha.shetty17@gmail.com"),
 				"API License",
